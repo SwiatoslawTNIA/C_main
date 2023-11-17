@@ -1,6 +1,6 @@
 /* A program that uses integers, strings, floating points and other data types.*/
 #include <stdio.h>
-int main()
+/*int main()
 {
     // printf("I am learning the %c programming language\n", 'C');
     // printf("I have just completed Chapter %d\n", 2);
@@ -18,4 +18,4 @@ int main()
     printf("Backspace: \basdf\n");
     printf("single qoute mark: \' and double qoute mark \"");
     
-}
+}*/

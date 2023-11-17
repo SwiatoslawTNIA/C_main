@@ -1,6 +1,6 @@
 //output the file on the screen
 #include <stdio.h>
-int main()
+/*int main()
 {
     printf("Just one small step for coders. One giant leap ");
     printf("for programmers \n");
@@ -8,4 +8,4 @@ int main()
     // printf('A');
     //the output is still an error, because incompatible integer, thus I comment the function above
     return 0;
-}
+}*/
