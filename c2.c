@@ -250,19 +250,130 @@
 //     free(numArray);
 //     //it works!!!!
 // }
-int main(){
-    //working with structures:
-    struct book{
-        char name[10];
-        int pages;
-        char author[20];
-        int public_year;
+// FILE * filepointer;
+// int main(){
+//     // //working with structures:
+//     // //working with files:
+//     // struct book{
+//     //     char name[20];
+//     //     int pages;
+//     //     char author[20];
+//     //     int public_year;
 
-    };
-    for(int i = 0; i < 2; i++){
-        printf("Tell me the name of the book");
-        fgets(book[i].name, 10, stdin);
-        
+//     // };
+//     // filepointer = fopen("C:\\C\\Own\\scanf\\text.txt", "w");//creates a file if it doesn't exist. how to access it? through a pointer!!!
+//     //  struct book books[2];
+//     //  //assure that the file opened:
+//     //  if (filepointer == 0){
+//     //     printf("Oops, the file didn't open!");
+//     //     exit(1);
+//     //  }
 
-    }
-}
+//     // for(int i = 0; i < 2; i++){
+//     //     printf("Tell me the name of the book\n");
+//     //     fgets(books[i].name, 20, stdin);// the reason it deosn't work hear,is that we described the struct book, 
+//     //     //but we didn't define an example fo that strucutre;
+//     //     printf("Tell me how many pages the book contains\n");
+//     //     scanf("%d", &books[i].pages);
+//     //     //get rid of that enter
+//     //     getchar();
+//     //     printf("Could you please specify the author!\n");
+//     //     fgets(books[i].author, 20, stdin);
+//     //     printf("Enter the publication year: \n");
+//     //     scanf("%d", &books[i].public_year);
+
+//     // }
+//     // printf("Here is the information that you wrote: \n");
+//     // printf("Name: %s\n", books[0].name);
+//     // printf("Pages: %d\n", books[0].pages);
+//     // printf("Author: %s\n", books[0].author);
+//     // printf("Author: %d\n", books[0].public_year);
+//     // //write data to a file:
+//     // fprintf(filepointer, "\nThis is our book:\n");
+//     // for(int ctr = 0; ctr < 2; ctr++){
+//     //     fprintf(filepointer, "Name: %s, Author: %s, number of pages: %d\n",books[ctr].name, books[ctr].author,
+//     //     books[ctr].pages);
+//     //     fprintf(filepointer, ", publication year: %d", books[ctr].public_year);
+//     // }
+//     // //close the file:(delete our filepointer)
+//     // fclose(filepointer);
+//     // return 0;
+//     //here is the program that then read the data from the file and returns it:
+//     // FILE * filepointer;
+//     char inputstorage[100];
+//     filepointer = fopen("C:\\C\\Own\\scanf\\text.txt", "r");
+//     if( filepointer != 0){
+//         while(!feof(filepointer)){
+//             fgets(inputstorage, 100, filepointer);
+//             if(!feof(filepointer)){
+//                 puts(inputstorage);
+//             }
+//         }
+//     }else{
+//         printf("Error opening a file.");
+
+// //     }
+// //     fclose(filepointer);
+// //     return 0;
+// // FILE * fpointer;
+// // // }
+// // int main(){
+// //     //create a writes the characters a through z in a file and then reads them again.
+// //     fpointer = fopen("C:\\C\\Own\\scanf\\text.txt1", "w+");
+// //     //write to the file:
+// //     if(fpointer == 0){
+// //         printf("Unable to locate the file.");
+// //         exit(1);
+
+// //     }
+// //     for(char letter = 'A'; letter <= 'Z'; letter++){
+// //         fputc(letter, fpointer);
+// //     }
+// //     puts("Just wrote the characters to the text file.\n");
+// //     puts("Reading from it: \n");
+// //     fseek(fpointer, -1, SEEK_END);//start from the before last element in our file;
+// //     puts("Here is our file backwards: \n");
+// //     char letter;
+// //     for(int i = 26; i > 0; i--){
+// //         letter = fgetc(fpointer);
+// //         fseek(fpointer, -2, SEEK_CUR);
+// //         printf("The next letter is: %c \n", letter);
+// //     }
+// //     fclose(fpointer);
+// //     return 0; 
+// // }
+// FILE * filepointer;
+// int main(){
+//     //locate the file:
+//     filepointer = fopen("C:\\C\\Own\\scanf\\text.txt1", "w+");
+//     //check if the file exists:
+
+//     if(filepointer == 0){
+//         printf("Couldn't locate the file.");
+//         exit(1);
+
+//     }
+//     fseek(filepointer, 0, SEEK_SET);
+//     for(int i = 'A'; i <= 'Z'; i++ ){
+//         fputc(i, filepointer);
+//     }
+//     int digit;
+//     printf("Which letter would you like to change (0 -26)");
+//     scanf("%d", &digit);
+//     digit -= 1;//cause array starts from zero;
+//     fseek(filepointer, digit, SEEK_SET);
+//     //rewrite the value:
+//     fputc('*', filepointer);
+//     //output our array of letters:
+//         fseek(filepointer, 0, SEEK_SET);
+//         printf("The first character is: %c", fgetc(filepointer));
+//     int letter;
+//     for(int i = 0; i < 26; i++){
+//         letter = fgetc(filepointer);
+//         fseek(filepointer, i + 1, SEEK_SET);
+//         printf("%c", letter);
+//     }
+//     fclose(filepointer);
+//     return 0;
+
+// }
